@@ -1,31 +1,32 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="esto es un prop de vue " msg2= '10'/> -->
-  <h2>Hola mundo</h2>
+  <!-- cada componente su propio estado independiente -->
+  <!-- el estado global se maneja con vuex -->
+  <h1>listado de post import de componentes</h1>
+  <PostContainer/>
+  <CounterOption/>
+  <CounterComposition/>
+  <ExampleSelective/>
+  <ExampleFor/>
+  <ClassBind/>
 </template>
 
-<script>
+<script setup>
 // import HelloWorld from './components/HelloWorld.vue'
-
-// export default {
-//   name: 'App',
-//   components: {
-//     HelloWorld
-//   }
-// }
+import PostContainer from './components/PostContainer.vue';
+import CounterOption from './components/CounterOption.vue';
+import CounterComposition from './components/CounterComposition.vue';
+import ExampleSelective from './components/ExampleSelective.vue'
+import ExampleFor from './components/ExampleFor.vue';
+import ClassBind from './components/ClassBind.vue';
 </script>
-  data  
+
+
 <style>
 /* aqui se definene estilos generales fuente color etc */
-#app{
-  color: #2c3e50;
+.container{
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 10px;
 }
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
+
 </style>
