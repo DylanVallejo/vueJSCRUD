@@ -9,8 +9,8 @@
             practicando v-bind para estilos
         </h3>
         <p :style="{ backgroundColor: 'purple', color: 'orange' }">Bindeando estilos </p>
-        <h3 v-bind:style="{backgroundColor: '#ccc', color: color}">
-            bind para eventos 
+        <h3 :style="{backgroundColor: '#ccc', color: color}">
+            bind para eventos cambiara de color 
         </h3>
         <button @click="handleClick()">Cambio color</button>
         
