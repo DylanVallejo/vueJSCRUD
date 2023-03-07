@@ -9,6 +9,9 @@
   <ExampleFor/>
   <ClassBind/>
   <ModelForm/>
+  <LifeCycleOption/>
+  <LifeCycleCompositionApi/>
+  <PostList/>
 </template>
 
 <script setup>
@@ -20,6 +23,9 @@ import ExampleSelective from './components/ExampleSelective.vue'
 import ExampleFor from './components/ExampleFor.vue';
 import ClassBind from './components/ClassBind.vue';
 import ModelForm from './components/ModelForm.vue';
+import LifeCycleOption from './components/LifeCycleOption.vue';
+import LifeCycleCompositionApi from './components/LifeCycleCompositionApi.vue';
+import PostList from './components/PostList.vue';
 </script>
 
 
@@ -29,6 +35,7 @@ import ModelForm from './components/ModelForm.vue';
   border: 1px solid black;
   margin: 10px auto;
   padding: 10px;
+  box-sizing: content-box;
 }
 
 </style>
