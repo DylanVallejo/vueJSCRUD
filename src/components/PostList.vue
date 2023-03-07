@@ -2,7 +2,7 @@
     <div class="container">
         <h3>Creacion de post mediante el uso de la comunicaicon vertical descendente props</h3>
         <div class="container2">
-            <PostDetail v-for="elm in info" :key="elm.title" :title="elm.title" :content= "elm.content" />
+            <PostDetail v-for="elm in info" :key="elm.title" :title="elm.title" :content= "elm.content" @alertFather="showAlertEmit" />
         </div>
     </div>
 </template>
@@ -15,7 +15,11 @@ let info = [
     { title: "Post 3", content: "texto de ejemplo 3"},
     { title: "Post 4", content: "texto de ejemplo 4"},
     { title: "Post 5", content: "texto de ejemplo 5"},
-    ]
+    ];
+    
+    function showAlertEmit(msg){
+        alert(msg)
+    }
 </script>
 
 <style scoped>

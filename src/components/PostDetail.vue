@@ -1,14 +1,15 @@
 <template>
     <div class="container">
-        <h4>{{ props.title }}</h4>
         <div class="post">
-            <h5></h5>
+            <h5>{{ props.title }}</h5>
             <p>{{ props.content }}</p>
+            <input  type="text" v-model="message"/>
+            <button @click="handleClick" >Alert Father Component</button>
         </div>
     </div>
 </template>
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent,ref } from 'vue';
 export default defineComponent({
     name:"PostDetail",
     props: {
@@ -22,8 +23,17 @@ export default defineComponent({
             default: "Este post no tiene contenido"
         }
     },
-    setup(props){
-        return {props}
+    //emits comunicacion vertical ascendente definimos
+    emits: ["alertFather"],
+    //props comunicacion vertical descendente desestrucutramos los emits
+    setup(props, {emit}){
+        let message = ref("")
+        const handleClick = () => { 
+            console.log(message)
+            emit("alertFather", message.value)
+        }
+        
+        return {props, message,handleClick}
     }
 })
 </script>
